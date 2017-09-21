@@ -2,7 +2,6 @@
 
 namespace MeetupBundle\Domain\Model\Entity;
 
-use MeetupBundle\Domain\Model\ValueObject\Event\Address;
 use MeetupBundle\Domain\Model\ValueObject\Event\Description;
 use MeetupBundle\Domain\Model\ValueObject\Event\Id;
 use MeetupBundle\Domain\Model\ValueObject\Event\Name;
@@ -47,27 +46,19 @@ class Event
 
     /**
      * @access private
-     * @var Address
-     */
-    private $address;
-
-    /**
-     * @access private
      * @param Id $id
      * @param Name $name
      * @param Description $description
      * @param Time $time
      * @param Url $url
-     * @param Address $address
      */
-    private function __construct(Id $id, Name $name, Description $description, Time $time, Url $url, Address $address)
+    private function __construct(Id $id, Name $name, Description $description, Time $time, Url $url)
     {
         $this->id = $id;
         $this->name = $name;
         $this->description = $description;
         $this->time = $time;
         $this->url = $url;
-        $this->address = $address;
     }
 
     /**
@@ -76,12 +67,11 @@ class Event
      * @param Description $description
      * @param Time $time
      * @param Url $url
-     * @param Address $address
      * @return self
      */
-    public static function create(Id $id, Name $name, Description $description, Time $time, Url $url, Address $address)
+    public static function create(Id $id, Name $name, Description $description, Time $time, Url $url)
     {
-        return new self($id, $name, $description, $time, $url, $address);
+        return new self($id, $name, $description, $time, $url);
     }
 
     /**
@@ -127,14 +117,5 @@ class Event
     public function url()
     {
         return $this->url->value();
-    }
-
-    /**
-     * @access public
-     * @return string
-     */
-    public function address()
-    {
-        return $this->address->value();
     }
 }

@@ -19,7 +19,7 @@ class MeetupReadingRepositoryTest extends TestCase
     {
         $config = array('key' => '1914239651b217b167e27121d172b3c');
         $meetupReadingReposiroty = $this->createMeetupReadingRepository($config);
-        $params = array('lat' => 41.490047, 'lon' => 2.139761, 'limit' => 2);
+        $params = array('lat' => 41.490047, 'lon' => 2.139761);
 
         $events = $meetupReadingReposiroty->findEventsBy($params);
 

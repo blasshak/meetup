@@ -51,8 +51,7 @@ class GetEventsDataTransformer implements DataTransformerInterface
                 'name' => $event->name(),
                 'description' => $event->description(),
                 'time' => $event->time(),
-                'url' => $event->url(),
-                'address' => $event->address()
+                'url' => $event->url()
             );
         }
 

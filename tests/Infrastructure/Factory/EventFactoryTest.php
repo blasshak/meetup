@@ -4,7 +4,6 @@ namespace Tests\Infrastructure\Factory;
 
 use MeetupBundle\Domain\Model\Entity\Event;
 use MeetupBundle\Domain\Model\Factory\EventFactoryInterface;
-use MeetupBundle\Domain\Model\ValueObject\Event\Address;
 use MeetupBundle\Domain\Model\ValueObject\Event\Description;
 use MeetupBundle\Domain\Model\ValueObject\Event\Id;
 use MeetupBundle\Domain\Model\ValueObject\Event\Name;
@@ -31,8 +30,7 @@ class EventFactoryTest extends TestCase
             Name::create('name'),
             Description::create('description'),
             Time::create(111),
-            Url::create('url'),
-            Address::create('address')
+            Url::create('url')
         );
 
         $this->assertInstanceOf(Event::class, $event);

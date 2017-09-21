@@ -3,7 +3,6 @@
 namespace Tests\Application\DataTransformer\Event;
 
 use MeetupBundle\Domain\Model\Entity\Event;
-use MeetupBundle\Domain\Model\ValueObject\Event\Address;
 use MeetupBundle\Domain\Model\ValueObject\Event\Description;
 use MeetupBundle\Domain\Model\ValueObject\Event\Id;
 use MeetupBundle\Domain\Model\ValueObject\Event\Name;
@@ -45,8 +44,7 @@ class GetEventsDataTransformerTest extends \PHPUnit_Framework_TestCase
             Name::create('name'),
             Description::create('description'),
             Time::create(111),
-            Url::create('url'),
-            Address::create('address')
+            Url::create('url')
         ));
         $dataTransformer = new GetEventsDataTransformer($formatConverter, $events);
 
@@ -62,9 +60,7 @@ class GetEventsDataTransformerTest extends \PHPUnit_Framework_TestCase
                     'name' => 'name',
                     'description' => 'description',
                     'time' => 111,
-                    'id' => '111',
-                    'url' => 'url',
-                    'address' => 'address'
+                    'url' => 'url'
                 )
             ),
             $data['data']

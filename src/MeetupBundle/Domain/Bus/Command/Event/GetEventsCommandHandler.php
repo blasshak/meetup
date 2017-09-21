@@ -5,7 +5,6 @@ namespace MeetupBundle\Domain\Bus\Command\Event;
 use MeetupBundle\Domain\Bus\Command\CommandInterface;
 use MeetupBundle\Domain\Model\Factory\EventFactoryInterface;
 use MeetupBundle\Domain\Model\Repository\MeetupReadingRepositoryInterface;
-use MeetupBundle\Domain\Model\ValueObject\Event\Address;
 use MeetupBundle\Domain\Model\ValueObject\Event\Description;
 use MeetupBundle\Domain\Model\ValueObject\Event\Id;
 use MeetupBundle\Domain\Model\ValueObject\Event\Name;
@@ -49,16 +48,16 @@ class GetEventsCommandHandler implements CommandInterface
     public function handle(CommandInterface $command) : array
     {
         $eventCollections = array();
-        $events = $this->meetupRepository->findEventsBy(array());
+        $parms = array('lat' => $command->lat(), 'lon' => $command->long());
+        $events = $this->meetupRepository->findEventsBy($parms);
 
         foreach ($events as $event) {
             $eventCollections[] = $this->eventFactory->create(
                 Id::create($event['id']),
                 Name::create($event['name']),
-                Description::create($event['description']),
+                Description::create(!empty($event['description']) ? $event['description'] : ''),
                 Time::create($event['time']),
-                Url::create($event['event_url']),
-                Address::create($event['venue']['address_1'])
+                Url::create($event['event_url'])
             );
         }
 
