@@ -26,7 +26,7 @@ class GetEventsCommandHandlerTest extends \PHPUnit_Framework_TestCase
     {
         $expectedEvents = array($this->createEventEntity(), $this->createEventEntity());
         $events = array($this->createEventArray(), $this->createEventArray());
-        $request = array('count' => 1, 'lat' => 1, 'long' => 1);
+        $request = array('lat' => 1, 'long' => 1);
         $command = $this->createCommand($request);
         $meetupRepository = $this->createMeetupRepository($events);
         $eventFactory = $this->createEventFactory($this->createEventEntity());

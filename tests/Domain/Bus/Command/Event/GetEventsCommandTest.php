@@ -25,18 +25,9 @@ class GetEventsCommandTest extends \PHPUnit_Framework_TestCase
         GetEventsCommand::create($request);
     }
 
-    public function test_should_require_count_not_empty()
-    {
-        $request = array('count' => 0, 'lat' => 1, 'long' => 1);
-
-        $this->expectException(InvalidRequestException::class);
-
-        GetEventsCommand::create($request);
-    }
-
     public function test_should_require_lat_not_empty()
     {
-        $request = array('count' => 1, 'lat' => '', 'long' => 1);
+        $request = array('lat' => '', 'long' => 1);
 
         $this->expectException(InvalidRequestException::class);
 
@@ -45,7 +36,7 @@ class GetEventsCommandTest extends \PHPUnit_Framework_TestCase
 
     public function test_should_require_long_not_empty()
     {
-        $request = array('count' => 1, 'lat' => 1, 'long' => 0);
+        $request = array('lat' => 1, 'long' => 0);
 
         $this->expectException(InvalidRequestException::class);
 
@@ -54,11 +45,10 @@ class GetEventsCommandTest extends \PHPUnit_Framework_TestCase
 
     public function test_should_create_new_command()
     {
-        $request = array('count' => 1, 'lat' => 1, 'long' => 1);
+        $request = array('lat' => 1, 'long' => 1);
 
         $command = GetEventsCommand::create($request);
 
-        $this->assertEquals($request['count'], $command->count());
         $this->assertEquals($request['lat'], $command->lat());
         $this->assertEquals($request['long'], $command->long());
     }

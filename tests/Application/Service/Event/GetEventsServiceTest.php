@@ -24,7 +24,7 @@ class GetEventsServiceTest extends \PHPUnit_Framework_TestCase
         $commandBusStub->shouldReceive('handle')->andReturn($eventsExpected);
         $service = new GetEventsService(array());
         $service->setCommandBus($commandBusStub);
-        $request = array('count' => 1, 'lat' => 1, 'long' => 1);
+        $request = array('lat' => 1, 'long' => 1);
 
         $events = $service->execute($request);
 

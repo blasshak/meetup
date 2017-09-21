@@ -13,12 +13,6 @@ class GetEventsCommand implements CommandInterface
 {
     /**
      * @access private
-     * @var int
-     */
-    private $count;
-
-    /**
-     * @access private
      * @var float
      */
     private $lat;
@@ -35,7 +29,6 @@ class GetEventsCommand implements CommandInterface
      */
     private function __construct(array $request)
     {
-        $this->count = $request['count'];
         $this->lat = $request['lat'];
         $this->long = $request['long'];
     }
@@ -48,7 +41,7 @@ class GetEventsCommand implements CommandInterface
      */
     public static function create(array $request)
     {
-        if (empty($request['count']) || empty($request['lat']) || empty($request['long'])) {
+        if (empty($request['lat']) || empty($request['long'])) {
             throw new InvalidRequestException(InvalidRequestException::MESSAGE);
         }
 
@@ -57,28 +50,19 @@ class GetEventsCommand implements CommandInterface
 
     /**
      * @access public
-     * @return int
+     * @return float
      */
-    public function count() : int
+    public function lat() : float
     {
-        return $this->count;
+        return $this->lat;
     }
 
     /**
      * @access public
-     * @return int
+     * @return float
      */
-    public function lat() : int
+    public function long() : float
     {
-        return $this->count;
-    }
-
-    /**
-     * @access public
-     * @return int
-     */
-    public function long() : int
-    {
-        return $this->count;
+        return $this->long;
     }
 }
