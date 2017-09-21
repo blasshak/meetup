@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e374941d-7165-4523-a8cc-9ccaab28ad89" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MeetupBundle/Domain/Bus/Command/Exception/InvalidRequestException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Domain/Bus/Command/Event/GetEventsCommandTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Domain/Model/Entity/EventTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MeetupBundle/Domain/Bus/Command/Event/GetEventsCommand.php" afterPath="$PROJECT_DIR$/src/MeetupBundle/Domain/Bus/Command/Event/GetEventsCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MeetupBundle/Domain/Model/Entity/Event.php" afterPath="$PROJECT_DIR$/src/MeetupBundle/Domain/Model/Entity/Event.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Domain/Bus/Command/Event/GetEventsHandlerTest.php" afterPath="$PROJECT_DIR$/tests/Domain/Bus/Command/Event/GetEventsHandlerTest.php" />
     </list>
     <ignored path="meetup.iws" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="GetEventsCommandTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Domain/Bus/Command/Event/GetEventsCommandTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="e#49#119#0#PHP" expanded="true" />
               </folding>
@@ -39,13 +38,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetEventsHandlerTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GetEventsHandlerTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Domain/Bus/Command/Event/GetEventsHandlerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+            <state relative-caret-position="144">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MeetupBundle/Domain/Model/Entity/Event.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding>
-                <element signature="e#50#110#0#PHP" expanded="true" />
+                <element signature="e#52#108#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/Domain/Model/Entity/EventTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+              <folding>
+                <element signature="e#44#87#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,12 +136,13 @@
         <option value="$PROJECT_DIR$/src/MeetupBundle/Domain/Model/ValueObject/Event/Address.php" />
         <option value="$PROJECT_DIR$/src/MeetupBundle/Domain/Model/Factory/EventFactoryInterface.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/MeetupBundle/Domain/Model/Entity/Event.php" />
         <option value="$PROJECT_DIR$/src/MeetupBundle/Domain/Bus/Command/Event/GetEventsCommandHandler.php" />
         <option value="$PROJECT_DIR$/src/MeetupBundle/Domain/Bus/Command/Exception/InvalidRequestException.php" />
         <option value="$PROJECT_DIR$/src/MeetupBundle/Domain/Bus/Command/Event/GetEventsCommand.php" />
         <option value="$PROJECT_DIR$/tests/Domain/Bus/Command/Event/GetEventsCommandTest.php" />
         <option value="$PROJECT_DIR$/tests/Domain/Bus/Command/Event/GetEventsHandlerTest.php" />
+        <option value="$PROJECT_DIR$/src/MeetupBundle/Domain/Model/Entity/Event.php" />
+        <option value="$PROJECT_DIR$/tests/Domain/Model/Entity/EventTest.php" />
       </list>
     </option>
   </component>
@@ -191,6 +213,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meetup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meetup" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domain" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -594,12 +642,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505976130372</updated>
-      <workItem from="1505976131794" duration="10244000" />
+      <workItem from="1505976131794" duration="11033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10244000" />
+    <option name="totallyTimeSpent" value="11033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2625" y="24" width="2495" height="1416" extended-state="6" />
@@ -640,14 +688,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MeetupBundle/Infrastructure/Symfony/Resources/infrastructure_services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -717,7 +757,7 @@
         <state relative-caret-position="198">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding>
-            <element signature="e#70#123#0#PHP" expanded="true" />
+            <element signature="e#70#123#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1005,14 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MeetupBundle/Domain/Model/Entity/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MeetupBundle/Domain/Model/ValueObject/Event/Id.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1053,20 +1085,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Domain/Bus/Command/Event/GetEventsCommandTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="e#49#119#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MeetupBundle/Domain/Model/Entity/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding>
+            <element signature="e#52#108#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Domain/Bus/Command/Event/GetEventsHandlerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+        <state relative-caret-position="144">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Domain/Model/Entity/EventTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
           <folding>
-            <element signature="e#50#110#0#PHP" expanded="true" />
+            <element signature="e#44#87#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

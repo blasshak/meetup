@@ -6,7 +6,7 @@ use MeetupBundle\Domain\Bus\Command\CommandHandlerInterface;
 use MeetupBundle\Domain\Bus\Command\CommandInterface;
 use MeetupBundle\Domain\Bus\Command\Event\GetEventsCommand;
 use MeetupBundle\Domain\Bus\Command\Event\GetEventsCommandHandler;
-use MeetupBundle\Domain\Model\Event\Event;
+use MeetupBundle\Domain\Model\Entity\Event;
 use MeetupBundle\Domain\Model\Factory\EventFactoryInterface;
 use MeetupBundle\Domain\Model\Repository\MeetupReadingRepositoryInterface;
 use Mockery as m;
