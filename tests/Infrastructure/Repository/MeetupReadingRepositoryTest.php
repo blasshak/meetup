@@ -15,7 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Tests\TestCase;
  */
 class MeetupReadingRepositoryTest extends TestCase
 {
-    public function atest_should_create_event_entity()
+    public function test_should_create_event_entity()
     {
         $config = array('key' => '1914239651b217b167e27121d172b3c');
         $meetupReadingReposiroty = $this->createMeetupReadingRepository($config);
