@@ -1,4 +1,4 @@
 services:
     mb.domain.get_events_command_handler:
-        class: MeetupBundle\Domain\Bus\Command\Events\GetEventsCommandHandler
+        class: MeetupBundle\Domain\Bus\Command\Event\GetEventsCommandHandler
         arguments: ["@mb.infrastructure.meetup_reading_repository", "@mb.infrastructure.event_factory"]
