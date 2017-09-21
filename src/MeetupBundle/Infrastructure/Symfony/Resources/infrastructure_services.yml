@@ -1,1 +1,28 @@
 services:
+    mb.infrastructure.cors_listener:
+        class: MeetupBundle\Infrastructure\Symfony\EventListener\CorsListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+
+    mb.infrastructure.meetup_reading_repository:
+        class: MeetupBundle\Infrastructure\Repository\MeetupReadingRepository
+        arguments: [%meetup_config%]
+
+    mb.infrastructure.event_factory:
+        class: MeetupBundle\Infrastructure\Factory\EventFactory
+
+    mb.infrastructure.command_bus:
+            class: MeetupBundle\Infrastructure\Bus\Command\CommandBus
+            arguments:
+              - ["@mb.infrastructure.command_hendler"]
+
+    mb.infrastructure.command_hendler:
+        class: MeetupBundle\Infrastructure\Bus\Command\Middleware\CommandHandler
+        arguments: ["@mb.infrastructure.symfony_container", "@mb.infrastructure.inflector_command_handler_name"]
+
+    mb.infrastructure.symfony_container:
+        class: MeetupBundle\Infrastructure\Service\Container\Symfony
+        arguments: ["@service_container"]
+
+    mb.infrastructure.inflector_command_handler_name:
+        class: MeetupBundle\Infrastructure\Service\Inflector\CommandHandlerName

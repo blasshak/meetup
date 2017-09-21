@@ -1,1 +1,10 @@
 services:
+    mb.application.get_events_service:
+        class: MeetupBundle\Application\Service\Event\GetEventsService
+        parent: mb.application.abstract_application_service
+
+    mb.application.abstract_application_service:
+        class: MeetupBundle\Application\Service\AbstractApplicationService
+        abstract: true
+        calls:
+            - [setCommandBus, ['@mb.infrastructure.command_bus']]

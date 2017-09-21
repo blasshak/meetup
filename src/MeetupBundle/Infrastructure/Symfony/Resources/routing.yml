@@ -1,0 +1,6 @@
+get_events:
+    path:     /events/{lat}/{long}
+    defaults: { _controller: 'MeetupBundle:Events:get' }
+    requirements:
+            count: '\d+'
+    methods:  [GET]

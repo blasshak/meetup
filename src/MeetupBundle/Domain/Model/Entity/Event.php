@@ -83,4 +83,58 @@ class Event
     {
         return new self($id, $name, $description, $time, $url, $address);
     }
+
+    /**
+     * @access public
+     * @return string
+     */
+    public function id()
+    {
+        return $this->id->value();
+    }
+
+    /**
+     * @access public
+     * @return string
+     */
+    public function name()
+    {
+        return $this->name->value();
+    }
+
+    /**
+     * @access public
+     * @return string
+     */
+    public function description()
+    {
+        return $this->description->value();
+    }
+
+    /**
+     * @access public
+     * @return string
+     */
+    public function time()
+    {
+        return $this->time->value();
+    }
+
+    /**
+     * @access public
+     * @return string
+     */
+    public function url()
+    {
+        return $this->url->value();
+    }
+
+    /**
+     * @access public
+     * @return string
+     */
+    public function address()
+    {
+        return $this->address->value();
+    }
 }
