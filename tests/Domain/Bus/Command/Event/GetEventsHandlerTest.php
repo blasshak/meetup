@@ -14,9 +14,9 @@ use Mockery as m;
 /**
  * Class GetEventsCommandHandlerTest
  * @group domain
- * @group domain_Bus
- * @group domain_Bus_command
- * @group domain_Bus_command_event
+ * @group domain_bus
+ * @group domain_bus_command
+ * @group domain_bus_command_event
  * @group integration_test
  * @package Tests\Domain\Bus\Command\Event
  */
